@@ -30,17 +30,19 @@ data2 <- data1 %>%
 
 #Plot the data
 #Creates a barplot with error bars
-ggplot(data2, aes(age_group, e2d2,fill = age_group)) + 
-  geom_bar(stat="identity", color="black", 
+ggplot(data2, aes(age_group, 
+                  e2d2,fill = age_group)) +                       #Basic bar plot
+  geom_bar(stat="identity",           
+           color="black",                                         #Bar color
            position=position_dodge()) +
-  geom_errorbar(aes(ymin=e2d2 - ci, ymax=e2d2 + ci), width=.2,
+  geom_errorbar(aes(ymin=e2d2 - ci, ymax=e2d2 + ci), width=.2,    #Error bars
                 position=position_dodge(.9)) +
-  labs(
+  labs(                                                           #Add titles for y-axis, x-axis, and legend
     x = "",
     y = "",
     fill = ""
   ) +
-  scale_fill_manual(
+  scale_fill_manual(                                              #Bar colors
     values = c(
       "18 - 34" = "#3E1F47",
       "35 - 37" = "#2A3B66",
