@@ -134,6 +134,7 @@ pot <- data.frame(hyper = Tes3$hyper,
 pot$fit_prob <- exp(pot$fit)/(1+exp(pot$fit))
 pot <- pot[!is.na(pot$hasPPD),]
 
+#Import library
 library(ggplot2)
 
 # Plot observed data points and predicted probabilities by age
