@@ -36,7 +36,7 @@ ggplot(data2, aes(age_group,
            color="black",                                         #Bar color
            position=position_dodge()) +
   geom_errorbar(aes(ymin=e2d2 - ci, ymax=e2d2 + ci), width=.2,    #Error bars
-                position=position_dodge(.9)) +
+                position=position_dodge(.9)) +                    #Location of error bars
   labs(                                                           #Add titles for y-axis, x-axis, and legend
     x = "",
     y = "",
